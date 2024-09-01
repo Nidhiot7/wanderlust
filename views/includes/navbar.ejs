@@ -1,55 +1,57 @@
-<style>
-    .search-btn{
-        background-color: #fe424d;
-        color: #fff;
-        border-radius: 25px;
-        padding: 0 1rem 0 1rem;
-    }
-    .search-btn:hover{
-        background-color: #fe424d;
-        color: #fff;
-    }
+<link rel="stylesheet" href="/css/navbar.css">
 
-    .search-btn i{
-        display: inline;
-        margin-right: 0.5rem;
-    }
+<nav class="nav-box">
+    <div id="nav-main">
+        <div id="nav-main-bar">
+            <div class="nav-icon">
+                <a href="/listings"><img class="airbnb_img" src="/icon/airbnb_img.png" alt="airbnb_Icon"><img /></a>
+            </div>
 
-    .search-inp{
-        border-radius: 25px;
-        padding: 0.5rem 3rem 0.5rem 3rem;
-        font-size: 1rem;
-    }
-</style>
+            <div class="nav-search nav-search-search">
+                <form class="d-flex needs-validation" role="search" action="/listings/search" method="get"
+                    id="searchBox">
+                    <input type="search" placeholder="Search" aria-label="Search" name="q" id="mySearchInput">
+                    <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">          
-              <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="/listings">Explore</a>    
-           </div>
+            <div class="create-listing">
+                <a href="/listings/new">Airbn your home</a>
+            </div>
 
-           <div class="navbar-nav ms-auto">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" aria-label="Search">
-                <button class="btn search-btn" type="submit"> <i class="fa-solid fa-magnifying-glass"></i>Search</button>
-              </form>
-           </div>
 
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">Airbn your home</a>
+            <div class="nav-user">
+                <div>
+                    <img src="/icon/nav_icon.png" id="png-img-bar">
+                    <img src="/icon/female.jpg" alt="User" id="png-img-user">
+                </div>
+            </div>
+
+            <div class="main_section" style="display: none;">
+                <a href="/profiles">Profile</a>
+                <!-- <a href="/listings/new">Airbn your home</a> -->
                 <% if(!currUser){%>
-                <a class="nav-link" href="/signup"><b>Sign up</b></a>
-                <a class="nav-link" href="/login"><b>Login</b></a>
-                <% } %> 
-                <% if(currUser){%>
-                <a class="nav-link" href="/logout"><b>Log out</b></a>
-                <% } %>
-           </div>
+                    <a href="/signup">Sign up</a>
+                    <a href="/login">Login</a>
+                    <% } %>
+                        <% if(currUser){%>
+                            <a href="/logout">LogOut</a>
+                            <% } %>
+            </div>
         </div>
     </div>
+
+    <!-- <div id="nav-search-hide">
+        <div class="nav-search nav-hover">
+            <form class="d-flex needs-validation" role="search" action="/listings/search" method="get" id="searchBox">
+                <input type="search" placeholder="Search" aria-label="Search" name="q" id="mySearchInput">
+                <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+            </form>
+        </div>
+    </div>
+    </div> -->
 </nav>
+
+
+
+<script src="/js/navbar.js"></script>

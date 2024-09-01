@@ -10,6 +10,13 @@ body {
 }
 
 /* Navbar */
+
+/* .sidebar{
+    display: block;
+    position: relative;
+    justify-content: space-between;
+} */
+
 .navbar {
     height: 5rem;
     background-color: white;
