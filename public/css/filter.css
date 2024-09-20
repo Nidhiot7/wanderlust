@@ -1,0 +1,141 @@
+.filters-main {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+#filters {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    align-items: center;
+    height: 90px;
+    position: relative;
+    margin: 5px 2px 0px 2px;
+}
+
+#filters::-webkit-scrollbar {
+    display: none;
+}
+
+#filters>a {
+    margin: 0px 1.25rem;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+    #filters>a {
+        margin: 0px .95rem;
+    }
+}
+
+@media (max-width:425px) {
+    #filters>a {
+        margin: 0px .35rem;
+    }
+}
+
+.filter {
+    text-align: center;
+    margin-top: 2rem;
+    opacity: 0.7;
+    transition: 150ms ease-in-out all;
+}
+
+#filters a i {
+    color: black;
+}
+
+.filter:hover {
+    opacity: 1 !important;
+    cursor: pointer;
+    border-bottom: 2.5px solid rgba(66, 63, 63, 0.679) !important;
+    transform: scale(1.05) !important;
+    transition: 150ms ease all;
+}
+
+.filter p {
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+#slideButton {
+    cursor: pointer;
+    position: sticky;
+    background-color: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75rem;
+    padding: 10px;
+    z-index: 100;
+    transition: all .2s ease-out;
+}
+
+#slideButton:active {
+    transform: scale(1.2);
+    background-color: black;
+}
+
+#slideButton>i {
+    font-size: 1rem;
+}
+
+.left_img_button {
+    left: 0px;
+}
+
+.right_img_button {
+    right: 0px;
+}
+
+
+.filter>p {
+    display: -block;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: black;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle {
+    border: .5px solid rgba(128, 128, 128, 0.503);
+    border-radius: 12px;
+    height: 3rem;
+    min-width: 300px;
+    width: fit-content !important;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-left: 1rem;
+    font-weight: 800;
+}
+
+.tax-toggle:hover {
+    border: 1px solid black;
+}
+
+@media (max-width: 767px) {
+    .filters-main {
+        display: flex;
+        flex-direction: column;
+        padding: auto;
+    }
+
+    .tax-toggle {
+      margin-right:1rem ;
+    }
+
+}

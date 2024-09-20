@@ -1,98 +1,96 @@
 <% layout("/layouts/boilerplate") %>
 
-  <style>
-    #filters {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+  <link rel="stylesheet" href="/css/filter.css">
 
-    .filter {
-      text-align: center;
-      margin-right: 1.5rem;
-      margin-top: 2rem;
-      opacity: 0.7;
-    }
+  <div class="filters-main">
+    <div id="filters">
 
-    .filter:hover {
-      opacity: 1;
-      cursor: pointer;
-    }
+      <div class="left_img_button" id="slideButton">
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
 
-    .filter p {
-      font-size: 0.8rem;
-    }
+      <a href="/listings/">
+        <div class="filter">
+          <div><i class="fa-solid fa-fire"></i></div>
+          <p>Trending</p>
+        </div>
+      </a>
 
-    .tax-info {
-      display: none;
-    }
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-bed"></i></div>
+          <p>Rooms</p>
+        </div>
+      </a>
 
-    .tax-toggle{
-      border: 1px solid black;
-      border-radius: 1rem;
-      height: 3.25rem;
-      padding: 1rem;
-      margin-left: 1rem;
-      display: flex;
-      align-items: center;
-    }
-  </style>
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-mountain-city"></i></div>
+          <p>Iconic Cities</p>
+        </div>
+      </a>
 
-  <!-- <nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Dropdown
-        </a> -->
-  <div id="filters">
-    <div class="filter">
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p>Trending</p>
-    </div>
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-mountain"></i></div>
+          <p>Mountain</p>
+        </div>
+      </a>
 
-    <div class="filter">
-      <div><i class="fa-solid fa-bed"></i></div>
-      <p>Rooms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p>Iconic Cities</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-mountain"></i></div>
-      <p>Mountain</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-brands fa-fort-awesome-alt"></i></div>
-      <p>Castles</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing Pool</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-campground"></i></div>
-      <p>Camping</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-cow"></i></div>
-      <p>Farms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-regular fa-snowflake"></i></div>
-      <p>Arctic</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-igloo"></i></div>
-      <p>Doms</p>
-    </div>
-    <div class="filter">
-      <div><i class="fa-solid fa-ship"></i></div>
-      <p>Boats</p>
-    </div>
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-brands fa-fort-awesome-alt"></i></div>
+          <p>Castles</p>
+        </div>
+      </a>
 
-    
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-person-swimming"></i></div>
+          <p>Amazing Pool</p>
+        </div>
+      </a>
+
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-campground"></i></div>
+          <p>Camping</p>
+        </div>
+      </a>
+
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-cow"></i></div>
+          <p>Farms</p>
+        </div>
+      </a>
+
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-regular fa-snowflake"></i></div>
+          <p>Arctic</p>
+        </div>
+      </a>
+
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-igloo"></i></div>
+          <p>Doms</p>
+        </div>
+      </a>
+
+      <a href="/listings">
+        <div class="filter">
+          <div><i class="fa-solid fa-ship"></i></div>
+          <p>Boats</p>
+        </div>
+      </a>
+
+      <div class="right_img_button" id="slideButton">
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+
+    </div>
 
     <div class="tax-toggle">
       <div class="form-check-reverse form-switch">
@@ -124,16 +122,5 @@
       <% } %>
   </div>
 
-  <script>
-    let taxSwitch = document.getElementById("flexSwitchCheckDefault");
-    taxSwitch.addEventListener("click", () => {
-      let taxInfo = document.getElementsByClassName("tax-info");
-      for (info of taxInfo) {
-        if (info.style.display != "inline") {
-          info.style.display = "inline";
-        } else {
-          info.style.display = "none";
-        }
-      }
-    });
-  </script>
+  <script src="/js/filter.js"></script>
+  <script src="/js/tax-info.js"></script>

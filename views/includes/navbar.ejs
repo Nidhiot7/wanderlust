@@ -15,9 +15,9 @@
                 </form>
             </div>
 
-            <div class="create-listing">
+            <!-- <div class="create-listing">
                 <a href="/listings/new">Airbn your home</a>
-            </div>
+            </div> -->
 
 
             <div class="nav-user">
@@ -29,7 +29,7 @@
 
             <div class="main_section" style="display: none;">
                 <a href="/profiles">Profile</a>
-                <!-- <a href="/listings/new">Airbn your home</a> -->
+                <a href="/listings/new">Airbn your home</a>
                 <% if(!currUser){%>
                     <a href="/signup">Sign up</a>
                     <a href="/login">Login</a>
@@ -39,19 +39,16 @@
                             <% } %>
             </div>
         </div>
-    </div>
 
-    <!-- <div id="nav-search-hide">
-        <div class="nav-search nav-hover">
-            <form class="d-flex needs-validation" role="search" action="/listings/search" method="get" id="searchBox">
-                <input type="search" placeholder="Search" aria-label="Search" name="q" id="mySearchInput">
-                <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></i></button>
-            </form>
+        <div id="nav-search-hide">
+            <div class="nav-search">
+                <form class="d-flex needs-validation" role="search" action="/listings/search" method="get" id="searchBox">
+                    <input type="search" placeholder="Search" aria-label="Search" name="q" id="mySearchInput">
+                    <button type="submit" id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
         </div>
     </div>
-    </div> -->
 </nav>
-
-
 
 <script src="/js/navbar.js"></script>
