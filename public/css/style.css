@@ -61,12 +61,11 @@ body::-webkit-scrollbar-thumb,
 
 /* Cards */
 
-.card {
+/* .card {
     border: .5px solid grey;
     margin-bottom: 1rem;
-    /* height: 20rem; */
     overflow: hidden;
-}
+} */
 
 .listing-card {
     border: none !important;
@@ -76,9 +75,17 @@ body::-webkit-scrollbar-thumb,
 /* Card Effect */
 
 .show-card-img {
-    /* height: 17rem !important; */
     overflow: hidden !important;
     border-radius: 1rem !important;
+}
+
+.card-img {
+    height: 20rem !important;
+    max-width: 320px;
+    overflow: hidden !important;
+    border-radius: 10px !important;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.654) !important;
+    margin-bottom: 10px;
 }
 
 .card-img-top {
@@ -129,6 +136,10 @@ body::-webkit-scrollbar-thumb,
 
 /* New Page */
 
+.form-label {
+    font-weight: 700;
+}
+
 .add-btn {
     background-color: #fe424d !important;
     border: none !important;
@@ -143,10 +154,6 @@ body::-webkit-scrollbar-thumb,
 
 /* Show.ejs */
 
-/* .show-img {
-    height: 30vh;
-} */
-
 .btns {
     display: flex;
 }
@@ -156,16 +163,14 @@ body::-webkit-scrollbar-thumb,
     padding-right: 0;
 }
 
-@media (max-width: 355px) {
+@media (max-width: 769px) {
     .card-img {
-        max-width: 290px;
-        height: 19rem !important;
-        max-width: 290px;
+        max-width:400px;
         overflow: hidden !important;
         border-radius: 1rem !important;
         box-shadow: 0px 6px 5px rgb(0, 0, 0) !important;
         margin-bottom: 15px;
-        margin-left: 15px;
+        /* margin-left: 15px; */
 
     }
 
@@ -290,24 +295,6 @@ body::-webkit-scrollbar-thumb,
         display: flex !important;
         flex-direction: column;
         margin-bottom: 15px;
-        margin-left: 15px;
-    }
-} */
-
-/* @media (max-width: 355px) {
-    .card-img {
-        max-width: 290px;
-        height: 19rem !important;
-        max-width: 290px;
-        overflow: hidden !important;
-        border-radius: 1rem !important;
-        box-shadow: 0px 6px 5px rgb(0, 0, 0) !important;
-        margin-bottom: 15px;
-        margin-left: 15px;
-
-    }
-
-    .card-text {
         margin-left: 15px;
     }
 } */
